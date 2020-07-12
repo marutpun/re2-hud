@@ -1,0 +1,104 @@
+:root {
+	--black: rgb(0, 0, 0);
+	--white: rgb(255, 255, 255);
+	--gray: rgb(158, 158, 158);
+	--red: rgb(244, 67, 54);
+	--blue: rgb(33, 150, 243);
+	--green: rgb(76, 175, 80);
+	--yellow: rgb(255, 235, 59);
+	--purple: rgb(156, 39, 176);
+	--orange: rgb(255, 152, 0);
+	--font-family-sans-serif: 'Helvetica', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: var(--black);
+	font-family: var(--font-family-sans-serif);
+	line-height: 1.5;
+}
+
+p {
+	margin: 0;
+}
+
+.wrapper {
+	max-width: calc(20rem);
+	padding: calc(1rem);
+}
+
+.healthpoint,
+.time,
+.dapoint,
+.label {
+	font-weight: 700;
+}
+
+.healthpoint {
+	margin: 0;
+	font-size: calc(2.5rem);
+}
+
+.healthpoint--danger {
+	color: var(--red);
+}
+
+.healthpoint--warning {
+	color: var(--yellow);
+}
+
+.healthpoint--success {
+	color: var(--green);
+}
+
+.healthpoint--poison {
+	color: var(--purple);
+}
+
+.time {
+	color: var(--white);
+	font-size: calc(2rem);
+}
+
+.dapoint {
+	color: var(--gray);
+	font-size: calc(1.125rem);
+}
+
+.label {
+	color: var(--red);
+	font-size: calc(1rem);
+	margin-bottom: calc(0.5rem);
+}
+
+.progress {
+	display: flex;
+	height: 30px;
+	overflow: hidden;
+	line-height: 0;
+	background-color: var(--gray);
+	border-bottom: 1px solid var(--black);
+}
+
+.progress:last-child {
+	border-bottom: none;
+}
+
+.progress-bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	color: var(--white);
+	text-align: center;
+	white-space: nowrap;
+	background-color: var(--orange);
+	border-right: 1px solid var(--black);
+	transition: all 0.2s linear 0s;
+}
